@@ -5,13 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 	public float maxSpeed = 10f;
 	public float jumpForce = 100f;
-	public float airSpeed = 5f;
+	public float gravity = 9.8f;
 	public Transform groundCheack;
 	public LayerMask whatIsGround;
 	public bool lift = false;
 
 	private bool jump = false;
-	private float groundRadius = 0.2f;
+	private float groundRadius = 0.3f;
 	private bool facingRight = true;
 	private bool grounded = false;
 	private Rigidbody2D myRigidbody2D;
@@ -50,21 +50,21 @@ public class Player : MonoBehaviour {
 				myRigidbody2D.AddForce(new Vector2(0,jumpForce));
 			}
 		}
-		if (lift && !grounded) {
+
+		if(lift && !grounded) {
 			lift = false;
 			jump = false;
 		}
+
+		if(!grounded)
+			myRigidbody2D.AddForce(new Vector2(0, -gravity));
 
 		float move = Input.GetAxis("Horizontal");
 
 		myAnimator.SetFloat("Speed", Mathf.Abs(move));
 
-		if (grounded && !jump)
-			myRigidbody2D.velocity = new Vector2(move * maxSpeed, myRigidbody2D.velocity.y);
-		else {
-			if(myRigidbody2D.velocity.x + (move * airSpeed) <= maxSpeed)
-				myRigidbody2D.AddForce(new Vector2(move * airSpeed, 0));
-		}
+		myRigidbody2D.velocity = new Vector2(move * maxSpeed, myRigidbody2D.velocity.y);
+
 
 		if (move > 0 && !facingRight)
 			Flip();
