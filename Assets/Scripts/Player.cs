@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
 	private bool grounded = false;
 	private Rigidbody2D myRigidbody2D;
 	private Animator myAnimator;
+	private Transform myTransform;
 
 
 
@@ -24,12 +25,17 @@ public class Player : MonoBehaviour {
 	void Start() {
 		myRigidbody2D = gameObject.GetComponent<Rigidbody2D>();
 		myAnimator = gameObject.GetComponent<Animator>();
+		myTransform = gameObject.GetComponent<Transform>();
 	}
 
 	// Update is called once per frame
 	void Update() {
 		if (grounded && Input.GetAxis("Vertical") > 0 && !lift) {
 			jump = true;
+		}
+
+		if (myTransform.position.y < -4) {
+			GameControler.EndGame();
 		}
 
 	}
