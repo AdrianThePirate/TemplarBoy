@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: 6fc1b17e75209894c9f331c786244b8b
+timeCreated: 1522027850
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: blink_0
+    21300002: blink_1
+    21300004: blink_2
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blink_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 16
+        width: 188
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -119}
+        - {x: 42, y: -116}
+        - {x: 38, y: -88}
+        - {x: 72, y: -46}
+        - {x: 94, y: 6}
+        - {x: 94, y: 55}
+        - {x: 60, y: 60}
+        - {x: 65, y: 100}
+        - {x: 62, y: 112}
+        - {x: 31, y: 119}
+        - {x: -42, y: 119}
+        - {x: -69, y: 110}
+        - {x: -61, y: 42}
+        - {x: -52, y: 8}
+        - {x: -64, y: -17}
+        - {x: -72, y: -57}
+        - {x: -94, y: -92}
+        - {x: -94, y: -111}
+        - {x: -82, y: -119}
+        - {x: -57, y: -119}
+        - {x: -33, y: -83}
+        - {x: -5, y: -119}
+      - - {x: 20, y: -8}
+        - {x: 21, y: -6}
+        - {x: 20, y: -15}
+        - {x: 20, y: -16}
+      physicsShape: []
+      tessellationDetail: 0.11
+    - serializedVersion: 2
+      name: blink_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 14
+        width: 188
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -119}
+        - {x: 42, y: -116}
+        - {x: 38, y: -88}
+        - {x: 72, y: -46}
+        - {x: 94, y: 6}
+        - {x: 94, y: 55}
+        - {x: 60, y: 60}
+        - {x: 65, y: 100}
+        - {x: 62, y: 112}
+        - {x: 31, y: 119}
+        - {x: -42, y: 119}
+        - {x: -69, y: 110}
+        - {x: -61, y: 42}
+        - {x: -52, y: 8}
+        - {x: -64, y: -17}
+        - {x: -72, y: -57}
+        - {x: -94, y: -92}
+        - {x: -94, y: -111}
+        - {x: -82, y: -119}
+        - {x: -57, y: -119}
+        - {x: -33, y: -83}
+        - {x: -5, y: -119}
+      - - {x: 20, y: -8}
+        - {x: 21, y: -6}
+        - {x: 20, y: -15}
+        - {x: 20, y: -16}
+      physicsShape: []
+      tessellationDetail: 0.11
+    - serializedVersion: 2
+      name: blink_2
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 11
+        width: 188
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -119}
+        - {x: 42, y: -116}
+        - {x: 38, y: -88}
+        - {x: 72, y: -46}
+        - {x: 94, y: 6}
+        - {x: 94, y: 55}
+        - {x: 60, y: 60}
+        - {x: 65, y: 100}
+        - {x: 65, y: 115}
+        - {x: 38, y: 119}
+        - {x: -49, y: 119}
+        - {x: -69, y: 110}
+        - {x: -61, y: 42}
+        - {x: -52, y: 8}
+        - {x: -64, y: -17}
+        - {x: -94, y: -90}
+        - {x: -94, y: -111}
+        - {x: -82, y: -119}
+        - {x: -57, y: -119}
+        - {x: -33, y: -83}
+        - {x: -5, y: -119}
+      - - {x: 20, y: -8}
+        - {x: 21, y: -6}
+        - {x: 20, y: -15}
+        - {x: 20, y: -16}
+      physicsShape: []
+      tessellationDetail: 0.1
+    outline:
+    - - {x: 292.5, y: 48}
+      - {x: 281.5, y: 111}
+      - {x: 247.5, y: 117}
+      - {x: 171.5, y: 117}
+      - {x: 142.5, y: 108}
+      - {x: 119.5, y: -79}
+      - {x: 119.5, y: -111}
+      - {x: 133.5, y: -125}
+      - {x: 270.5, y: -125}
+      - {x: 311.5, y: -39}
+      - {x: 311.5, y: 45}
+      - {x: 308.5, y: 49}
+    - - {x: -67.5, y: 120}
+      - {x: -61.5, y: -7}
+      - {x: -93.5, y: -70}
+      - {x: -93.5, y: -112}
+      - {x: -85.5, y: -122}
+      - {x: -59.5, y: -122}
+      - {x: -45.5, y: -114}
+      - {x: -13.5, y: -122}
+      - {x: 44.5, y: -122}
+      - {x: 98.5, y: 15}
+      - {x: 98.5, y: 45}
+      - {x: 76.5, y: 120}
+    - - {x: -191.5, y: 122}
+      - {x: -252.5, y: 122}
+      - {x: -284.5, y: 110}
+      - {x: -277.5, y: 43}
+      - {x: -312.5, y: -95}
+      - {x: -312.5, y: -103}
+      - {x: -302.5, y: -118}
+      - {x: -293.5, y: -120}
+      - {x: -177.5, y: -120}
+      - {x: -120.5, y: -11}
+      - {x: -120.5, y: 55}
+      - {x: -151.5, y: 116}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
