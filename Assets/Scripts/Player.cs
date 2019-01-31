@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
-	public float maxSpeed = 10f;
-	public float jumpForce = 100f;
-	public float gravity = 9.8f;
+public class Player: MonoBehaviour {
+	public float maxSpeed = 8f;
+	public float jumpForce = 7f;
+	public float fallMultiplier = 2f;
+	public float lowJumpMultipler = 1.5f;
 	public Transform groundCheack;
 	public LayerMask whatIsGround;
-	public bool lift = false;
 
 	private bool jump = false;
 	private float groundRadius = 0.3f;
@@ -30,49 +30,57 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		if (grounded && Input.GetAxis("Vertical") > 0 && !lift) {
+		if(grounded && Input.GetAxis("Vertical") > 0) {
 			jump = true;
 		}
 
-		if (myTransform.position.y < -4) {
+		if(myTransform.position.y < -4) {
 			GameControler.EndGame();
 		}
 
-	}
-
-	void FixedUpdate() {
-		grounded = Physics2D.OverlapCircle(groundCheack.position, groundRadius, whatIsGround);
-		myAnimator.SetBool("Ground", grounded);
-		myAnimator.SetBool("Jump", jump);
-
-		if(jump) {
-			if(lift) {
-				myRigidbody2D.AddForce(new Vector2(0,jumpForce));
-			}
-		}
-
-		if(lift && !grounded) {
-			lift = false;
+		if(!grounded) {
 			jump = false;
 		}
 
-		if(!grounded)
-			myRigidbody2D.AddForce(new Vector2(0, -gravity));
-
-		float move = Input.GetAxis("Horizontal");
-
-		myAnimator.SetFloat("Speed", Mathf.Abs(move));
-
-		myRigidbody2D.velocity = new Vector2(move * maxSpeed, myRigidbody2D.velocity.y);
-
-
-		if (move > 0 && !facingRight)
-			Flip();
-
-		else if (move < 0 && facingRight)
-			Flip();
+		myAnimator.SetBool("Ground", grounded);
+		myAnimator.SetBool("Jump", jump);
 	}
 
+	//Update when physics calculates (50 times a min)
+	void FixedUpdate() {
+		// Cheack ground
+		grounded = Physics2D.OverlapCircle(groundCheack.position, groundRadius, whatIsGround);
+
+		//Jumping
+		if(jump) {
+			myRigidbody2D.velocity = Vector2.up * jumpForce;
+		}
+
+		if(!grounded) {
+			if(myRigidbody2D.velocity.y < 0) {
+				myRigidbody2D.velocity = Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1);
+			} else if(Input.GetAxis("Vertical") <= 0) {
+				myRigidbody2D.velocity = Vector2.up * Physics2D.gravity.y * (lowJumpMultipler - 1);
+			}
+		}
+
+		//Movement left/right
+		float move = Input.GetAxis("Horizontal");
+		myAnimator.SetFloat("Speed", Mathf.Abs(move));
+		myRigidbody2D.velocity = new Vector2(move * maxSpeed, myRigidbody2D.velocity.y);
+
+		//Cheack orantiation and flip if needed
+		if(move > 0 && !facingRight) {
+			Flip();
+		} else if(move < 0 && facingRight) {
+			Flip();
+		}
+	}
+
+
+	/// <summary>
+	/// c>Flip</c> translate character the opposit direction it's faceing.
+	/// </summary>
 	void Flip() {
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
