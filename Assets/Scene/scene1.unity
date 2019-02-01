@@ -1696,9 +1696,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paralaxEffectX: 0.75
   paralaxEffectY: 0.4
-  lastCameraX: 0
-  lastCameraY: 0
-  cameraTansform: {fileID: 0}
 --- !u!1 &876778832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,9 +1855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paralaxEffectX: 0.3
   paralaxEffectY: 0.3
-  lastCameraX: 0
-  lastCameraY: 0
-  cameraTansform: {fileID: 0}
 --- !u!1 &996760298
 GameObject:
   m_ObjectHideFlags: 0

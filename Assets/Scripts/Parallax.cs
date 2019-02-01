@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Parralax : MonoBehaviour
-{
+public class Parallax : MonoBehaviour {
 	public float paralaxEffectX = 0.1f;
 	public float paralaxEffectY = 0.1f;
 
