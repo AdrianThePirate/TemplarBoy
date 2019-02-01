@@ -1694,8 +1694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b45ee8d2623214c83caeb37929c952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paralaxEffectX: 0.75
-  paralaxEffectY: 0.4
+  parallaxEffectX: 0.5
+  parallaxEffectY: 0.3
 --- !u!1 &876778832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,8 +1853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b45ee8d2623214c83caeb37929c952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paralaxEffectX: 0.3
-  paralaxEffectY: 0.3
+  parallaxEffectX: 0.2
+  parallaxEffectY: 0.2
 --- !u!1 &996760298
 GameObject:
   m_ObjectHideFlags: 0

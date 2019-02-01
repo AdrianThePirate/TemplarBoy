@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour {
-	public float paralaxEffectX = 0.1f;
-	public float paralaxEffectY = 0.1f;
+	public float parallaxEffectX = 0.1f;
+	public float parallaxEffectY = 0.1f;
 
 	private float lastCameraX;
 	private float lastCameraY;
@@ -18,14 +18,13 @@ public class Parallax : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 		float deltaX = cameraTansform.position.x - lastCameraX;
-		transform.position += Vector3.right * (deltaX * paralaxEffectX);
-		lastCameraX = cameraTansform.position.x;
-
 		float deltaY = cameraTansform.position.y - lastCameraY;
-		transform.position += Vector3.up * (deltaY * paralaxEffectY);
+		lastCameraX = cameraTansform.position.x;
 		lastCameraY = cameraTansform.position.y;
+
+		transform.position += new Vector3(deltaX * parallaxEffectX, deltaY * parallaxEffectY, 0);
 	}
 }
