@@ -44,6 +44,7 @@ public class Player: MonoBehaviour {
 
 		myAnimator.SetBool("Ground", grounded);
 		myAnimator.SetBool("Jump", jump);
+		myAnimator.SetFloat("Speed", Mathf.Abs(myRigidbody2D.velocity.x));
 	}
 
 	//Update when physics calculates (50 times a min)
@@ -63,7 +64,7 @@ public class Player: MonoBehaviour {
 				myRigidbody2D.velocity = Vector2.up * Physics2D.gravity.y * (lowJumpMultipler - 1);
 			}
 		}
-
+			
 		//Movement left/right
 		float move = Input.GetAxis("Horizontal");
 		myAnimator.SetFloat("Speed", Mathf.Abs(move));
